@@ -1,0 +1,111 @@
+{
+  "paper_info": {
+    "title": "PAPER2CODE: AUTOMATING CODE GENERATION FROM SCIENTIFIC PAPERS IN MACHINE LEARNING",
+    "authors": [
+      {
+        "name": "Minju Seo",
+        "affiliation": "KAIST, LG AI Research"
+      },
+      {
+        "name": "Jinheon Baek",
+        "affiliation": "KAIST"
+      },
+      {
+        "name": "Seongyun Lee",
+        "affiliation": "KAIST"
+      },
+      {
+        "name": "Sung Ju Hwang",
+        "affiliation": "KAIST, DeepAuto.ai"
+      }
+    ],
+    "year": "2026",
+    "venue": "ICLR",
+    "publication_type": "conference",
+    "peer_reviewed": "yes",
+    "doi_url": null,
+    "open_source_artifact": "yes",
+    "affiliation_region": "South Korea"
+  },
+  "included": true,
+  "exclusion_reason": null,
+  "coding": {
+    "RQ1": {
+      "Perception_ContextAcquisition": [
+        "The goal of our repository-level code generation task is to automatically produce a repository that faithfully implements methods and experiments described in machine learning papers."
+      ],
+      "Environment_Interaction": [
+        "The model then identifies components (to be implemented), categorizes them into three severity levels (high, medium, and low), and critiques how well each component is implemented."
+      ],
+      "Tool_CapabilityUse": [
+        "PaperCoder operates in three stages: planning, where it constructs a high-level roadmap, designs the system architecture with diagrams, identifies file dependencies, and generates configuration files; analysis, which focuses on interpreting implementation-specific details; and generation, where modular, dependency-aware code is produced."
+      ],
+      "Memory_StateManagement": [
+        "The analysis phase focuses on interpreting and specifying the implementation-level details for modules within each file."
+      ],
+      "Reasoning_Planning": [
+        "Each phase is instantiated through a set of specialized agents designed to collaborate effectively across the pipeline."
+      ],
+      "Action_Execution": [
+        "The final stage is the coding phase, where the complete code repository is produced."
+      ],
+      "Feedback_Reflection": [
+        "We perform model-based evaluation with GPT-4o on all the collected repositories and select the top 30 from each venue."
+      ],
+      "Human_Collaboration": [
+        "We also perform human evaluations with the authors of the original papers, to ensure reliable judgments and to assess the quality of our model-based evaluations by measuring their correlation with human scores."
+      ],
+      "Role_MultiagentCoordination": [
+        "Moreover, each phase is instantiated through a set of specialized agents designed to collaborate effectively across the pipeline."
+      ],
+      "Governance_Traceability": [
+        "We ensure the quality and reliability of human evaluations by measuring the inter-annotator agreement based on Cohen’s kappa coefficient, which exhibits a high score of 0.79, indicating strong consistency."
+      ]
+    },
+    "RQ2": {
+      "primary_form": "SoftwareEngineering_AgenticSystem",
+      "secondary_form": "ResearchAutomation_System"
+    },
+    "RQ3": {
+      "application_domain": "machine learning",
+      "task_context": "transforming machine learning papers into operational code repositories",
+      "target_users": "researchers and developers",
+      "digital_artifacts": [
+        "code repositories",
+        "configuration files",
+        "datasets"
+      ],
+      "domain_tools": [
+        "LLMs",
+        "OpenReview API",
+        "Semantic Scholar API"
+      ]
+    },
+    "RQ4": {
+      "evaluation_type": [
+        "benchmark",
+        "human_evaluation",
+        "expert_evaluation"
+      ],
+      "benchmarks_datasets": [
+        "Paper2CodeBench",
+        "PaperBench Code-Dev"
+      ],
+      "baselines": "yes",
+      "metrics": [
+        "correctness",
+        "reproducibility",
+        "executability"
+      ],
+      "agentic_specific_metrics": [
+        "planning quality",
+        "tool-use correctness",
+        "recovery rate"
+      ],
+      "reproducibility": "yes",
+      "validity_discussion": "yes",
+      "domain_validation": "yes",
+      "statistical_analysis": "yes"
+    }
+  }
+}
